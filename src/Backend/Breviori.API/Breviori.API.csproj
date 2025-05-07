@@ -14,7 +14,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Shared\Communication\Communication.csproj" />
-      <ProjectReference Include="..\..\Shared\Exceptions\Exceptions.csproj" />
       <ProjectReference Include="..\Breviori.Application\Breviori.Application.csproj" />
       <ProjectReference Include="..\Breviori.Infrastructure\Breviori.Infrastructure.csproj" />
     </ItemGroup>

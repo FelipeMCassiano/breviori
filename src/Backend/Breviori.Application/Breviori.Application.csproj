@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Shared\Communication\Communication.csproj" />
-      <ProjectReference Include="..\..\Shared\Exceptions\Exceptions.csproj" />
       <ProjectReference Include="..\Breviori.Domain\Breviori.Domain.csproj" />
     </ItemGroup>
 
