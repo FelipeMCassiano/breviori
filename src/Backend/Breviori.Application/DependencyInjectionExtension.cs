@@ -1,5 +1,6 @@
 using AutoMapper;
 using Breviori.Application.Services.AutoMapper;
+using Breviori.Application.UseCases.Url.DeleteShortenedUrl;
 using Breviori.Application.UseCases.Url.GetShortenedUrl;
 using Breviori.Application.UseCases.Url.RegisterUrl;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +20,7 @@ public static class DependencyInjectionExtension
 	{
 		services.AddScoped<IRegisterUrlUseCase, RegisterUrlUseCase>();
 		services.AddScoped<IGetShortenedUrl, GetShortenedUrl>();
+		services.AddScoped<IDeleteShortenedUrl, DeleteShortenedUrl>();
 	}
 
 	private static void AddAutoMapper(IServiceCollection services, IConfiguration configuration)

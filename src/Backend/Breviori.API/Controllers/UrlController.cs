@@ -1,3 +1,4 @@
+using Breviori.Application.UseCases.Url.DeleteShortenedUrl;
 using Breviori.Application.UseCases.Url.GetShortenedUrl;
 using Breviori.Application.UseCases.Url.RegisterUrl;
 using Communication.Requests;
@@ -29,5 +30,16 @@ namespace Breviori.API.Controllers;
 		    
 		    return Redirect(longUrl);
 	    }
+
+	    [HttpDelete]
+	    [Route("{url}")]
+	    [ProducesResponseType(StatusCodes.Status204NoContent)]
+	    public async Task<ActionResult> Delete(string url, [FromServices] IDeleteShortenedUrl useCase)
+	    {
+		    await useCase.Execute(url);
+		    
+		    return NoContent();
+	    }
+	    
     }
 
