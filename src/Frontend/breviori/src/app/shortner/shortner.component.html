@@ -1,0 +1,16 @@
+<div class="result-container" *ngIf="response">
+  <div class="url-row">
+    <span class="label">Short URL:</span>
+    <a [href]="response.shortUrl" target="_blank">{{ response.shortUrl }}</a>
+    <button type="button" (click)="copyShortenedUrl(response.shortUrl!)">Copy URL</button>
+  </div>
+
+  <div class="url-row">
+    <span class="label">Long URL:</span>
+    <a [href]="response.longUrl" target="_blank">{{ response.longUrl }}</a>
+  </div>
+
+  <div class="go-back-container">
+    <button type="button" (click)="goBack()">Go Back</button>
+  </div>
+</div>

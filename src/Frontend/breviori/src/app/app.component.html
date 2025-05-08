@@ -1,0 +1,9 @@
+<div *ngIf="!router.url.startsWith('/shortner')" class="url-container">
+    <h1>Paste the Url </h1>
+    <div class="form-group">
+       <label for="urlRequest">Url:</label>
+       <input id="urlRequest" [(ngModel)]="url" placeholder="example.com">
+       <button [routerLink]="['/shortner/', url]" type="button">Shorten Url</button>
+    </div>
+</div>
+<router-outlet></router-outlet>
